@@ -1,0 +1,17 @@
+Other file: .
+Other file: ..
+DBF: RABBRG.DBF
+Beware: space of C (Character field) - will be double in MySQL for the special case of a full special-chars-only field
+RABBRG	kodebrg (C / 8)
+	namabrg (C / 25)
+	satuan (C / 6)
+	harga (N / 10)
+	pi_gi (N / 5)
+	pi_pvc (N / 5)
+	ws (C / 10)
+	user (C / 10)
+	tglu (D / 8)
+	jam (C / 5)
+Table RABBRG successfully created
+Initializing import: Table RABBRG
+string(2720) "INSERT INTO `RABBRG` (`KODEBRG`,`NAMABRG`,`SATUAN`,`HARGA`,`PI_GI`,`PI_PVC`,`WS`,`USER`,`TGLU`,`JAM` ) values ('CV12','Chekvalve í 1/2','Bh','16500.00','0','0','SUROSO','ROSO','2000-08-08 00:00','09:45'),('WM12','Water meter í 1/2"','Bh','132000.00','0','0','SUROSO','ROSO','2000-07-29 00:00','07:26'),('ST','Seal tape','Bh','1200.00','0','0','SUROSO','ROSO','2000-07-29 00:00','07:26'),('BV12','Ballvalve í 1/2','Bh','14500.00','0','0','SUROSO','ROSO','2000-07-29 00:00','07:29'),('BWM','Bak water meter','Bh','20000.00','0','0','SUROSO','ROSO','2000-07-29 00:00','07:29'),('PN','Plat nomor','Bh','5000.00','0','0','SUROSO','ROSO','2000-07-29 00:00','07:29'),('A1','Outzet.S í 1"','Bh','3250.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:07'),('A12','Outzet.S í 1/2"','Bh','3050.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:07'),('C112X12','Clemp saddle í 1 1/2x1/2"','bh','14500.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:09'),('C2X12','Clemp saddle í 2x1/2"','bh','15950.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:10'),('C3X12','Clemp saddle í 3x1/2"','bh','20800.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:10'),('C4X12','Clemp saddle í 4x1/2"','bh','25000.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:11'),('D1','D.Nepel í 1"','Bh','3250.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:11'),('D12','D.Nepel GI í 1/2"','Bh','1750.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:12'),('K12','Knie GI í 1/2"','Bh','1750.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:12'),('KR12','Kran handel taho í 1/2"','Bh','7250.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:13'),('KP12','Knie PVC í 1/2"','Bh','805.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:14'),('L','Leem Tropical glue','Kg','19000.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:15'),('P12','Pipa GI í 1/2"','m','8450.00','1150','0','SISWANTO','ROSO','2000-09-30 00:00','10:17'),('P34','Pipa GI í 3/4"','m','10900.00','1150','0','SISWANTO','ROSO','2000-09-30 00:00','10:18'),('PP12','Pipa PVC í 1/2"','m','1370.00','0','800','SISWANTO','ROSO','2000-09-30 00:00','10:19'),('S12','Sock GI í 1/2"','Bh','1600.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:20'),('TP12','Tee PVC í 1/2"','Bh','985.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:21'),('T12','Tee GI í 1/2"','Bh','2200.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:22'),('TP1X12','V.tee PVC í 1x1/2"','Bh','3680.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:24'),('W1','W.mur í 1"','Bh','12350.00','0','0','SISWANTO','ROSO','2000-09-30 00:00','10:25'),('W12','Water Mur','Bh','8300.00','0','0','DARU','ROSO','2001-01-29 00:00','14:26'),('','','','','','','','','1970-01-01 01:00','')"

@@ -14,6 +14,7 @@ class DBFhandler {
 
     private $Filename, $DB_Type, $DB_Update, $DB_Records, $DB_FirstData, $DB_RecordLength, $DB_Flags, $DB_CodePageMark, $DB_Fields, $FileHandle, $FileOpened;
     private $Memo_Handle, $Memo_Opened, $Memo_BlockSize;
+    public $endOfFile;
 
     private function Initialize() {
 
@@ -26,6 +27,7 @@ class DBFhandler {
         }
 
         $this->FileOpened = false;
+        $this->endOfFile = false;
         $this->FileHandle = NULL;
         $this->Filename = NULL;
         $this->DB_Type = NULL;
@@ -124,9 +126,15 @@ class DBFhandler {
             $Return = false;
         } elseif ( feof( $this->FileHandle ) ) {
             $Return = NULL;
+            $this->endOfFile = true;
         } else {
             // File open and not EOF
-            fseek( $this->FileHandle, 1, SEEK_CUR );  // Ignoring DELETE flag
+            fseek( $this->FileHandle, 0, SEEK_CUR );
+            $delete = false;
+            if(fread( $this->FileHandle,1 ) == '*'){
+                $delete = true;
+            }
+//            fseek( $this->FileHandle, 1, SEEK_CUR );  // Ignoring DELETE flag
             foreach ( $this->DB_Fields as $Field ) {
                 $RawData = fread( $this->FileHandle, $Field[ "Size" ] );
                 // Checking for memo reference
@@ -151,6 +159,7 @@ class DBFhandler {
                 }
 
                 if ( $FieldCaptions ) {
+                    $Record[ 'delete' ] = $delete;
                     $Record[ 'value' ][ $Field[ "Name" ] ] = $Value;
                     $Record[ 'type' ][ $Field[ "Name" ] ] = $Field[ "Type" ];
                 } else {
